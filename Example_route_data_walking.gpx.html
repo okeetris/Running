@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>G53MDP-UK-AUT1718: Example route data (walking)</title>
+    <link rel="shortcut icon" href="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/theme/1510770071/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgcEWFRVGwACVVJRAgk="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<meta name="keywords" content="moodle, G53MDP-UK-AUT1718: Example route data (walking)" />
+<link rel="stylesheet" type="text/css" href="http://moodle.nottingham.ac.uk/theme/yui_combo.php?3.17.2/cssreset/cssreset-min.css&amp;3.17.2/cssfonts/cssfonts-min.css&amp;3.17.2/cssgrids/cssgrids-min.css&amp;3.17.2/cssbase/cssbase-min.css" /><link rel="stylesheet" type="text/css" href="http://moodle.nottingham.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="http://moodle.nottingham.ac.uk/theme/styles.php/nottingham_science/1510770071/all" />
+<link rel="stylesheet" type="text/css" href="http://moodle.nottingham.ac.uk/blocks/accessibility/userstyles.php" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"http:\/\/moodle.nottingham.ac.uk","sesskey":"FK4Nv0qzhG","loadingicon":"http:\/\/moodle.nottingham.ac.uk\/theme\/image.php\/nottingham_science\/core\/1510770071\/i\/loading_small","themerev":"1510770071","slasharguments":1,"theme":"nottingham_science","jsrev":"1510770071","admin":"admin","svgicons":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"http:\/\/moodle.nottingham.ac.uk\/lib\/yuilib\/3.17.2\/","comboBase":"http:\/\/moodle.nottingham.ac.uk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"http:\/\/moodle.nottingham.ac.uk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"http:\/\/moodle.nottingham.ac.uk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"http:\/\/moodle.nottingham.ac.uk\/theme\/yui_combo.php?m\/1510770071\/","combine":true,"comboBase":"http:\/\/moodle.nottingham.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"m\/1510770071\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-formautosubmit":{"requires":["base","event-key"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-calendar-info":{"requires":["base","node","event-mouseenter","event-key","overlay","moodle-calendar-info-skin"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-toolboxes":{"requires":["node","base","event-key","node","io","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_aspirelists-inline_display":{"requires":["base","node","event","event-delegate"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_tutorialbooking-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_curriculum_map-curriculum":{"requires":["base","io-base","node","dom","event-custom","event-delegate","json-parse"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_curriculum-curriculum":{"requires":["base","node"]},"moodle-format_timetable-timetable":{"requires":["base","node"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_kalturamedia-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-local_autouploadcourses-filter":{"requires":["base","node","event-base","event-key"]},"moodle-local_autouploadcourses-filtersort":{"requires":["base","node","datatype-number"]},"moodle-local_kaltura-ltipanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-local_kaltura-ltitinymcepanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-local_kaltura-ltiservice":{"requires":["base","node","node-event-simulate"]},"moodle-local_kaltura-lticontainer":{"requires":["base","node"]}}},"gallery":{"name":"gallery","base":"http:\/\/moodle.nottingham.ac.uk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"http:\/\/moodle.nottingham.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1510770071\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/moodle.nottingham.ac.uk\/lib\/javascript.php\/1510770071\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker"]},"core_comment":{"name":"core_comment","fullpath":"http:\/\/moodle.nottingham.ac.uk\/lib\/javascript.php\/1510770071\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?delayStartupUntil=configured"},"block_course_contents":{"name":"block_course_contents","fullpath":"http:\/\/moodle.nottingham.ac.uk\/lib\/javascript.php\/1510770071\/blocks\/course_contents\/module.js","requires":["base","node","event-simulate"]},"block_accessibility":{"name":"block_accessibility","fullpath":"http:\/\/moodle.nottingham.ac.uk\/lib\/javascript.php\/1510770071\/blocks\/accessibility\/module.js","requires":["base","node","stylesheet","io"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<style type="text/css">
+<!--
+.style1 {
+color: #FFFFFF
+}
+
+#browser_check { 
+display: none;
+}
+-->
+ </style>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.moodle.nottingham.ac.uk"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//catalyst-analytics.eu/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '25']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//catalyst-analytics.eu/piwik.php?idsite=25" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+<meta name="robots" content="index, nofollow" />
+<meta name="googlebot" content="noarchive" />
+<meta name="pagetitle" content="Mobile Device Programming (G53MDP UK) (AUT 17-18)" />
+<meta name="pagetype" content="resource" />
+<meta name="courseid" content="u_g53mdp_17-18_sep.000117" />
+<meta name="country" content="uk" />
+<meta name="modulecode" content="g53mdp" />
+<meta name="session" content="17-18" />
+<meta name="path" content="208/96/122/430" />
+<meta name="spath" content="UNUK/Faculty+of+Science/Computer+Science/Level+3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-resource-view" class="format-topics  path-mod path-mod-resource safari dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-nottingham-ac-uk pagelayout-incourse course-53733 context-4173438 cmid-2873271 category-430 category-122 category-96 category-208  has-region-side-pre used-region-side-pre has-region-side-post used-region-side-post has-region-footer used-region-footer">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Skip to main content</a>
+</div><script type="text/javascript" src="http://moodle.nottingham.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js&amp;rollup/1510770071/mcore-min.js"></script><script type="text/javascript" src="http://moodle.nottingham.ac.uk/theme/jquery.php/core/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="http://moodle.nottingham.ac.uk/theme/jquery.php/theme_nottingham/jquery.backstretch-2.0.4.js"></script>
+<script type="text/javascript" src="http://moodle.nottingham.ac.uk/theme/jquery.php/theme_nottingham/jquery.slick-1.6.0.js"></script>
+<script type="text/javascript" src="http://moodle.nottingham.ac.uk/lib/javascript.php/1510770071/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+ <div id="browser_check">
+<table width="100%" border="0" cellspacing="0" cellpadding="3" height="250">
+  <tr>
+    <td bgcolor="#ff0000">
+    <div align="center"><strong><span class="style1">Your current browser is incompatible with this new version of Moodle. <a href="http://workspace.nottingham.ac.uk/x/05hwC" target="_blank">More Information</a></span></strong>
+    </div></td>
+  </tr>
+</table>
+
+</div>
+<script>var bgArray = ["http://moodle.nottingham.ac.uk/pluginfile.php/1/theme_nottingham_science/schoolimages/12/unmc_fsci_compsci.jpg"]</script>
+<header role="banner" class="navbar moodle-has-zindex">
+    <div class="navbar-top">
+        <nav role="navigation" class="navbar-inner">
+            <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <ul class="nav pull-right">
+                <div class="usermenu"><div class="moodle-actionmenu nowrap-items" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <ul class="menubar" id="action-menu-0-menubar" role="menubar">
+
+            <!--
+
+            --><!--
+
+            --><li role="presentation"><a href="#" class="toggle-display textmenu" id="action-menu-toggle-0" title="" role="menuitem"><span class="userbutton"><span class="usertext">Tristan OKeefe</span><span class="avatars"><span class="avatar current"><img src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/u/f2" alt="Picture of Tristan OKeefe" title="Picture of Tristan OKeefe" class="userpicture defaultuserpic" width="35" height="35" role="presentation" /></span></span></span><b class="caret"></b></a></li>
+
+        </ul>
+
+
+        <ul class="menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+            <li role="presentation">    <a href="http://moodle.nottingham.ac.uk/my/" class="icon menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1"><img class="iconsmall" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/course"/><span class="menu-action-text" id="actionmenuaction-1">Dashboard</span></a>
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+</li><li role="presentation">    <a href="http://moodle.nottingham.ac.uk/user/profile.php?id=199940" class="icon menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2"><img class="iconsmall" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/user"/><span class="menu-action-text" id="actionmenuaction-2">Profile</span></a>
+
+
+
+
+</li><li role="presentation">    <a href="http://moodle.nottingham.ac.uk/grade/report/overview/index.php" class="icon menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3"><img class="iconsmall" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/t/grades"/><span class="menu-action-text" id="actionmenuaction-3">Grades</span></a>
+
+
+
+
+</li><li role="presentation">    <a href="http://moodle.nottingham.ac.uk/message/index.php" class="icon menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4"><img class="iconsmall" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/t/message"/><span class="menu-action-text" id="actionmenuaction-4">Messages</span></a>
+
+
+
+
+</li><li role="presentation">    <a href="http://moodle.nottingham.ac.uk/user/preferences.php" class="icon menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5"><img class="iconsmall" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/t/preferences"/><span class="menu-action-text" id="actionmenuaction-5">Preferences</span></a>
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+</li><li role="presentation">    <a href="http://moodle.nottingham.ac.uk/login/logout.php?sesskey=FK4Nv0qzhG" class="icon menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6"><img class="iconsmall" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/a/logout"/><span class="menu-action-text" id="actionmenuaction-6">Log out</span></a>
+
+
+
+
+</li>
+        </ul>
+</div></div>            </ul>
+                        <div class="nav-collapse collapse">
+                <ul class="nav main-nav"><li class="menu-home"><a title="Home" href="http://moodle.nottingham.ac.uk/">Home</a></li><li class="dropdown menu-library"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Library" href="#cm_submenu_1">Library<b class="caret"></b></a><ul class="dropdown-menu"><li class="dropdown-submenu menu-library-search-(nusearch)"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Library Search (NUSearch)" href="#cm_submenu_2">Library Search (NUSearch)</a><ul class="dropdown-menu"><li class="menu-uk-campus"><a title="UK Campus" href="http://nusearch.nottingham.ac.uk">UK Campus</a></li><li class="menu-china-campus"><a title="China Campus" href="http://nusearch.nottingham.edu.cn">China Campus</a></li><li class="menu-malaysia-campus"><a title="Malaysia Campus" href="http://nusearch.nottingham.edu.my">Malaysia Campus</a></li></ul></li><li class="dropdown-submenu menu-library-locations"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Library Locations" href="#cm_submenu_3">Library Locations</a><ul class="dropdown-menu"><li class="menu-uk-campus"><a title="UK Campus" href="http://www.nottingham.ac.uk/library/index.aspx">UK Campus</a></li><li class="menu-china-campus"><a title="China Campus" href="http://www.nottingham.edu.cn/en/library/index.aspx">China Campus</a></li><li class="menu-malaysia-campus"><a title="Malaysia Campus" href="http://www.nottingham.edu.my/IS/LibraryServices/index.aspx">Malaysia Campus</a></li></ul></li></ul></li><li class="dropdown menu-studying-effectively"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Studying Effectively" href="#cm_submenu_4">Studying Effectively<b class="caret"></b></a><ul class="dropdown-menu"><li class="dropdown-submenu menu-online-resources"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Online resources" href="#cm_submenu_5">Online resources</a><ul class="dropdown-menu"><li class="menu-studying-at-university"><a title="Studying at University" href="http://www.nottingham.ac.uk/studyingeffectively/studying/index.aspx">Studying at University</a></li><li class="menu-types-of-teaching"><a title="Types of teaching" href="http://www.nottingham.ac.uk/studyingeffectively/teaching/index.aspx">Types of teaching</a></li><li class="menu-being-organised"><a title="Being organised" href="http://www.nottingham.ac.uk/studyingeffectively/organised/index.aspx">Being organised</a></li><li class="menu-reading-and-interpreting-sources-and-data"><a title="Reading and interpreting sources and data" href="http://www.nottingham.ac.uk/studyingeffectively/reading/index.aspx">Reading and interpreting sources and data</a></li><li class="menu-writing"><a title="Writing" href="http://www.nottingham.ac.uk/studyingeffectively/writing/index.aspx">Writing</a></li><li class="menu-preparing-for-assessment"><a title="Preparing for assessment" href="http://www.nottingham.ac.uk/studyingeffectively/preparing/index.aspx">Preparing for assessment</a></li></ul></li><li class="dropdown-submenu menu-university-support"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="University Support" href="#cm_submenu_6">University Support</a><ul class="dropdown-menu"><li class="menu-people-who-can-help"><a title=" People who can help" href="http://www.nottingham.ac.uk/studyingeffectively/peoplewhocanhelp.aspx"> People who can help</a></li></ul></li></ul></li><li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Help" href="#cm_submenu_7">Help<b class="caret"></b></a><ul class="dropdown-menu"><li class="menu-help-pages-for-students"><a title="Help Pages for Students" href="http://workspace.nottingham.ac.uk/display/StudentMoodle/Student+Moodle+Help">Help Pages for Students</a></li><li class="menu-help-pages-for-staff"><a title="Help Pages for Staff" href="http://workspace.nottingham.ac.uk/display/Moodlehelp/Moodle+Help">Help Pages for Staff</a></li><li class="dropdown-submenu menu-local-support"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Local Support" href="#cm_submenu_8">Local Support</a><ul class="dropdown-menu"><li class="dropdown-submenu menu-uk-campus"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="UK Campus" href="#cm_submenu_9">UK Campus</a><ul class="dropdown-menu"><li class="menu-tel:-+44-(0115-95)-16677-(24hrs)"><a title="Tel: +44 (0115 95) 16677 (24hrs)" href="tel://01159516677">Tel: +44 (0115 95) 16677 (24hrs)</a></li><li class="menu-e-mail:-itservicedesk@nottingham.ac.uk"><a title="E-Mail: itservicedesk@nottingham.ac.uk" href="mailto:itservicedesk@nottingham.ac.uk?subject=Moodle%20Help%20Requested">E-Mail: itservicedesk@nottingham.ac.uk</a></li><li class="menu-log-in-to-the-service-desk"><a title="Log in to the Service Desk" href="https://selfservice.nottingham.ac.uk">Log in to the Service Desk</a></li></ul></li><li class="dropdown-submenu menu-china-campus"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="China Campus" href="#cm_submenu_10">China Campus</a><ul class="dropdown-menu"><li class="menu-tel:-+86-(0574)-8818-0000-(ext.8915)"><a title="Tel: +86 (0574) 8818 0000 (ext.8915)" href="tel://057488180915">Tel: +86 (0574) 8818 0000 (ext.8915)</a></li><li class="menu-e-mail:-e-learning-support@nottingham.edu.cn"><a title="E-Mail: e-learning-support@nottingham.edu.cn" href="mailto:e-learning-support@nottingham.edu.cn?subject=Moodle%20Help%20Requested">E-Mail: e-learning-support@nottingham.edu.cn</a></li></ul></li><li class="dropdown-submenu menu-malaysia-campus"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Malaysia Campus" href="#cm_submenu_11">Malaysia Campus</a><ul class="dropdown-menu"><li class="menu-tel:-+6-(03)-8924-8199"><a title="Tel: +6 (03) 8924 8199" href="tel://60389248199">Tel: +6 (03) 8924 8199</a></li><li class="menu-e-mail:-itservicedesk@nottingham.edu.my"><a title="E-Mail: ITServiceDesk@nottingham.edu.my" href="mailto:ITServiceDesk@nottingham.edu.my?subject=Moodle%20Help%20Requested">E-Mail: ITServiceDesk@nottingham.edu.my</a></li></ul></li></ul></li></ul></li><li class="menu-accessibility"><a title="Accessibility" href="http://moodle.nottingham.ac.uk/mod/page/view.php?id=1260474">Accessibility</a></li><li class="menu-test-your-text"><a title="Test Your Text" href="http://moodle.nottingham.ac.uk/course/view.php?id=60560">Test Your Text</a></li><li class="dropdown menu-timetable"><a class="dropdown-toggle" data-toggle="dropdown" data-target=" " title="Timetable" href="#cm_submenu_12">Timetable<b class="caret"></b></a><ul class="dropdown-menu"><li class="menu-unuk-online-timetables"><a title="UNUK Online Timetables" href="https://timetabling.nottingham.ac.uk">UNUK Online Timetables</a></li></ul></li></ul>            </div>
+        </nav>
+    </div>
+    </header>
+
+<header id="page-header" class="clearfix">
+        <div id="page-navbar" class="clearfix container-fluid">
+        <div class="page-navbar-inner">
+            <nav class="breadcrumb-nav"><span class="accesshide" id="navbar-label">Page path</span><nav aria-labelledby="navbar-label"><ul><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://moodle.nottingham.ac.uk/my/"><span itemprop="title">Dashboard</span></a></span></li><li> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">›</span> <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Mobile Device Programming (G53MDP UK) (AUT 17-18)" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733"><span itemprop="title">Mobile Device Programming (G53MDP UK) (AUT 17-18)</span></a></span></li><li> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">›</span> <span tabindex="0">Coursework</span></li><li> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">›</span> <a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873271" id="label_5_34" class="" tabindex="-1" title="File">Example route data (walking)</a></li></ul></nav></nav>
+            <div class="breadcrumb-button"></div>
+        </div>
+    </div>
+</header>
+<div id="wrapper">
+<div id="faculty-header">
+    <div class="container-fluid">
+        <h3><strong>Faculty of Science</strong> - <strong>Computer Science</strong> - Level 3</h3>    </div>
+</div>
+
+<div id="course-header">
+    <div class="container-fluid">
+        <h1>Mobile Device Programming (G53MDP UK) (AUT 17-18)</h1>    </div>
+</div>
+
+<div id="page" class="container-fluid">
+
+    <div id="page-content" class="row-fluid">
+        <div id="region-bs-main-and-pre" class="span9">
+            <div class="row-fluid">
+                <section id="region-main" class="span8 pull-right">
+                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><h2>Example route data (walking)</h2><div class="resourceworkaround">Click <a href="http://moodle.nottingham.ac.uk/pluginfile.php/4173438/mod_resource/content/2/route-data.gpx" onclick="this.target='_blank'">route-data.gpx</a> link to view the file.</div></div>                </section>
+                <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Skip Navigation</a><div id="inst4" class="block_navigation  block" role="navigation" data-block="navigation" data-instanceid="4" aria-labelledby="instance-4-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-4-header">Navigation</h2></div></div><div class="content"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" aria-labelledby="label_1_1"><p class="tree_item branch navigation_node" role="treeitem" aria-expanded="true" aria-owns="random5a4cb5a01e3591_group" data-collapsible="false"><a tabindex="-1" id="label_1_1" href="http://moodle.nottingham.ac.uk/my/">Dashboard</a></p><ul id="random5a4cb5a01e3591_group" role="group"><li class="type_setting depth_2 contains_branch" aria-labelledby="label_2_2"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a4cb5a01e3592_group"><a tabindex="-1" id="label_2_2" href="http://moodle.nottingham.ac.uk/?redirect=0">Site home</a></p><ul id="random5a4cb5a01e3592_group" role="group" aria-hidden="true"><li class="type_system depth_3 item_with_icon" aria-labelledby="label_3_3"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_3" href="http://moodle.nottingham.ac.uk/local/mymedia/mymedia.php"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">My Media</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_5"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a4cb5a01e3594_group"><span tabindex="-1" id="label_2_5">Current Module</span></p><ul id="random5a4cb5a01e3594_group" role="group"><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_6"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a4cb5a01e3595_group"><a tabindex="-1" id="label_3_6" title="Mobile Device Programming (G53MDP UK) (AUT 17-18)" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733">Mobile Device Programming (G53MDP UK) (AUT 17-18)</a></p><ul id="random5a4cb5a01e3595_group" role="group"><li class="type_unknown depth_4 contains_branch" aria-labelledby="label_4_7"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a4cb5a01e3596_group"><a tabindex="-1" id="label_4_7" href="http://moodle.nottingham.ac.uk/user/index.php?id=53733">Participants</a></p><ul id="random5a4cb5a01e3596_group" role="group" aria-hidden="true"><li class="type_setting depth_5 item_with_icon" aria-labelledby="label_5_8"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_8" href="http://moodle.nottingham.ac.uk/blog/index.php?courseid=53733"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Module blogs</span></a></p></li><li class="type_user depth_5 item_with_icon" aria-labelledby="label_5_9"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_9" href="http://moodle.nottingham.ac.uk/user/view.php?id=199940&amp;course=53733"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Tristan OKeefe</span></a></p></li></ul></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_10"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_10" href="http://moodle.nottingham.ac.uk/badges/view.php?type=2&amp;id=53733"><img class="smallicon navicon" alt="Badges" title="Badges" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/badge"/><span class="item-content-wrap">Badges</span></a></p></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_11"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_11" href="http://moodle.nottingham.ac.uk/grade/report/index.php?id=53733"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/grades"/><span class="item-content-wrap">Grades</span></a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_15"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a4cb5a01e35911_group"><span tabindex="-1" id="label_4_15">Coursework</span></p><ul id="random5a4cb5a01e35911_group" role="group"><li class="type_activity depth_5 item_with_icon current_branch" aria-labelledby="label_5_34"><p class="tree_item hasicon active_tree_node" role="treeitem"><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873271" id="label_5_34" class="" tabindex="-1" title="File"><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/markup-24"/><span class="item-content-wrap">Example route data (walking)</span></a></p></li></ul></li><li class="type_system depth_4 item_with_icon" aria-labelledby="label_4_39"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_39" href="http://moodle.nottingham.ac.uk/local/kalturamediagallery/index.php?courseid=53733"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Media Gallery</span></a></p></li></ul></li></ul></li><li class="type_custom depth_2 contains_branch" aria-labelledby="label_2_40"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a4cb5a01e35914_group"><a tabindex="-1" id="label_2_40" href="http://moodle.nottingham.ac.uk/my/">Current Modules</a></p><ul id="random5a4cb5a01e35914_group" role="group" aria-hidden="true"><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_41"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_41" href="http://moodle.nottingham.ac.uk/course/view.php?id=56747"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">_Community Page (Computer Science) (UK) (17-18) [p]</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_42"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_42" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Mobile Device Programming (G53MDP UK) (AUT 17-18)</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_43"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_43" href="http://moodle.nottingham.ac.uk/course/view.php?id=53743"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Advanced Computer Networks (G54ACN UK) (AUT 17-18)</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_44"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_44" href="http://moodle.nottingham.ac.uk/course/view.php?id=53762"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Linear and Discrete Optimization (G54LDO UK) (AUT ...</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_45"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_45" href="http://moodle.nottingham.ac.uk/course/view.php?id=63148"><img class="smallicon navicon" alt="" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/i/navigationitem"/><span class="item-content-wrap">Computer Science PGT Tutorial G64TUT (UK) (17-18)</span></a></p></li></ul></li></ul></li></ul></div></div><span class="skip-block-to" id="sb-1"></span></aside>            </div>
+        </div>
+        <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"><a class="skip skip-block" id="fsb-4" href="#sb-4">Skip Module Contents</a><div id="inst435663" class="block_course_contents  block" role="complementary" data-block="course_contents" data-instanceid="435663" aria-labelledby="instance-435663-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-435663-header">Module Contents</h2></div></div><div class="content"><ul class="section-list"><li class="section-item r0"><a class="" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733#section-0"><span class="section-title not-enumerated">General</span></a><ul class="course-contents-activities"><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>AttendanceA reminder that attendance at lectures i...</a></li><li><a title="Forum" href="http://moodle.nottingham.ac.uk/mod/forum/view.php?id=2523767"><img class="smallicon navicon" alt="Forum" title="Forum" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/forum/1510770071/icon"/>Announcements</a></li><li><a title="Feedback" href="http://moodle.nottingham.ac.uk/mod/feedback/view.php?id=2857164"><img class="smallicon navicon" alt="Feedback" title="Feedback" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/feedback/1510770071/icon"/>Early Module Feedback</a></li><li><a title="Forum" href="http://moodle.nottingham.ac.uk/mod/forum/view.php?id=2539489"><img class="smallicon navicon" alt="Forum" title="Forum" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/forum/1510770071/icon"/>Questions</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Module ConvenorsDr Martin Flintham, room C02, mart...</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Lectures and labs</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Lectures:Monday 11-12 C33 ExchangeThursday 10-11 C...</a></li></ul></li><li class="section-item r1"><a class="" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733#section-1"><span class="section-title not-enumerated">Lecture Slides</span></a><ul class="course-contents-activities"><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Lecture slides will appear here hopefully the day ...</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2835878" id="action_link5a4cb5a01e35920" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture01</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2835879" id="action_link5a4cb5a01e35921" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture01 handouts</a></li><li><a title="File" href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2837960"><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture02</a></li><li><a title="File" href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2837962"><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture02 handouts</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2840605"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture02 Recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2842536" id="action_link5a4cb5a01e35922" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture03</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2842537" id="action_link5a4cb5a01e35923" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture03 handouts</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2843361"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture03 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2849605" id="action_link5a4cb5a01e35924" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture04 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2849607" id="action_link5a4cb5a01e35925" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture04 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2850704"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture04 recording (youtube)</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2853334"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Activities Sample Code</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850537" id="action_link5a4cb5a01e35926" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture05 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850536" id="action_link5a4cb5a01e35927" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture05 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2850706"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture05 recording (youtube)</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2853927" id="action_link5a4cb5a01e35928" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture06 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2856723" id="action_link5a4cb5a01e35929" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture06 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2857524"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture06 recording</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2853335"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Threads Sample Code</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2857531" id="action_link5a4cb5a01e35930" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture07 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2857530" id="action_link5a4cb5a01e35931" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture07 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2857517"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture07 recording</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2857157"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Services Sample Code 1</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2857159"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Services Sample Code 2</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2857161"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Services Sample Code 3</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2859163" id="action_link5a4cb5a01e35932" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture08</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2859164" id="action_link5a4cb5a01e35933" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture08 handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2866161"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture08 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2863430" id="action_link5a4cb5a01e35934" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture09</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2863431" id="action_link5a4cb5a01e35935" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture09 handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2866163"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture09 recording</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2865604"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Remote Service Example</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2865603"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Remote Service Client Example</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2865605"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>AIDL Service Example</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2865606"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>AIDL Client Example</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2867021" id="action_link5a4cb5a01e35936" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture10 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2867022" id="action_link5a4cb5a01e35937" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture10 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2866997"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture10 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2870610" id="action_link5a4cb5a01e35938" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture11 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2870612" id="action_link5a4cb5a01e35939" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture11 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2897067"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture11 recording</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2870606"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Storage Example</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874683" id="action_link5a4cb5a01e35940" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture12 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874680" id="action_link5a4cb5a01e35941" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture12 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2897075"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture12 recording</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2872780"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>ContentProvider example</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876894" id="action_link5a4cb5a01e35942" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture13 trimmed</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876892" id="action_link5a4cb5a01e35943" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture13 trimmed handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2897076"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture13 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876893" id="action_link5a4cb5a01e35944" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture14</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876895" id="action_link5a4cb5a01e35945" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture14 handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2897078"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture14 recording</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2876897"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Broadcasts Example</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2880887" id="action_link5a4cb5a01e35946" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture15</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2880893" id="action_link5a4cb5a01e35947" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture15 handout</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2884357" id="action_link5a4cb5a01e35948" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture16</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2884358" id="action_link5a4cb5a01e35949" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture16 handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2884360"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>Gesture Example</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2887993" id="action_link5a4cb5a01e35950" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture17</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2887994" id="action_link5a4cb5a01e35951" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture17 handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2898464"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture17 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2890323" id="action_link5a4cb5a01e35952" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture18</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2890324" id="action_link5a4cb5a01e35953" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture18 handout</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2890329" id="action_link5a4cb5a01e35954" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/archive-24"/>Power Example</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2898467"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture18 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2893655" id="action_link5a4cb5a01e35955" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture19</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2893657" id="action_link5a4cb5a01e35956" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture19 handout</a></li><li><a title="URL" href="http://moodle.nottingham.ac.uk/mod/url/view.php?id=2898772"><img class="smallicon navicon" alt="URL" title="URL" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/url/1510770071/icon"/>g53mdp lecture19 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2896472" id="action_link5a4cb5a01e35957" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture20</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2896473" id="action_link5a4cb5a01e35958" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture20 handout</a></li><li><a title="Media Resource" href="http://moodle.nottingham.ac.uk/mod/kalvidres/view.php?id=2898788"><img class="smallicon navicon" alt="Media Resource" title="Media Resource" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/kalvidres/1510770071/icon"/>g53mdp lecture20 recording</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2899213" id="action_link5a4cb5a01e35959" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture21</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2899214" id="action_link5a4cb5a01e35960" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lecture21 handouts</a></li></ul></li><li class="section-item r0"><a class="" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733#section-2"><span class="section-title not-enumerated">Lab Exercises</span></a><ul class="course-contents-activities"><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Lab exercises will appear here each week.&nbsp;Not...</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2844572" id="action_link5a4cb5a01e35961" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lab01</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850690" id="action_link5a4cb5a01e35962" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lab02</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2857243" id="action_link5a4cb5a01e35963" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lab03</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2862791" id="action_link5a4cb5a01e35964" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lab04</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2870605" id="action_link5a4cb5a01e35965" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lab05</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2877144" id="action_link5a4cb5a01e35966" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp lab06</a></li></ul></li><li class="section-item r1"><a class="" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733#section-3"><span class="section-title not-enumerated">Coursework</span></a><ul class="course-contents-activities"><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Coursework 1-1</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2864529" id="action_link5a4cb5a01e35967" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>CS-CW-Issue-1-1</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2854185" id="action_link5a4cb5a01e35968" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp cwk1 1</a></li><li><a title="Assignment" href="http://moodle.nottingham.ac.uk/mod/assign/view.php?id=2857666"><img class="smallicon navicon" alt="Assignment" title="Assignment" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/assign/1510770071/icon"/>Coursework 1-1 Fingerpainter</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Errata 19/10/17 - I've updated the coursework docu...</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850121" id="action_link5a4cb5a01e35969" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/sourcecode-24"/>FingerPainterView</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Coursework 1-2</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866341" id="action_link5a4cb5a01e35970" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>CS-CW-Issue-1-2</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866343" id="action_link5a4cb5a01e35971" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp cwk1 2</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866342" id="action_link5a4cb5a01e35972" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/sourcecode-24"/>MP3Player</a></li><li><a title="Assignment" href="http://moodle.nottingham.ac.uk/mod/assign/view.php?id=2872806"><img class="smallicon navicon" alt="Assignment" title="Assignment" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/assign/1510770071/icon"/>Coursework 1-2 MP3 Player</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Coursework 1-3 - available 20th November</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2872812" id="action_link5a4cb5a01e35973" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>CS-CW-Issue-1-3</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2872813" id="action_link5a4cb5a01e35974" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp cwk1 3</a></li><li><a title="Assignment" href="http://moodle.nottingham.ac.uk/mod/assign/view.php?id=2892426"><img class="smallicon navicon" alt="Assignment" title="Assignment" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/assign/1510770071/icon"/>Coursework 1-3 Recipe Book</a></li><li><a title="Label" href=""><img class="smallicon navicon" alt="Label" title="Label" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/label/1510770071/icon"/>Coursework 2 - available 13th November</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873267" id="action_link5a4cb5a01e35975" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>CS-CW-Issue-2</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874686" id="action_link5a4cb5a01e35976" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/pdf-24"/>g53mdp cwk2</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873271" id="action_link5a4cb5a01e35977" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/markup-24"/>Example route data (walking)</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874684" id="action_link5a4cb5a01e35978" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/markup-24"/>Example route data (running)</a></li><li><a href="http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874685" id="action_link5a4cb5a01e35979" class=""><img class="smallicon navicon" alt="File" title="File" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/core/1510770071/f/markup-24"/>Example route data (running)</a></li><li><a title="Assignment" href="http://moodle.nottingham.ac.uk/mod/assign/view.php?id=2898789"><img class="smallicon navicon" alt="Assignment" title="Assignment" src="http://moodle.nottingham.ac.uk/theme/image.php/nottingham_science/assign/1510770071/icon"/>Coursework 2 Running Tracker</a></li></ul></li><li class="section-item r0"><a class="" href="http://moodle.nottingham.ac.uk/course/view.php?id=53733#section-4"><span class="section-title not-enumerated">Topic 4</span></a></li></ul></div></div><span class="skip-block-to" id="sb-4"></span><a class="skip skip-block" id="fsb-5" href="#sb-5">Skip School News</a><div id="inst680418" class="block_rss_client  block" role="complementary" data-block="rss_client" data-instanceid="680418" aria-labelledby="instance-680418-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-680418-header">School News</h2></div></div><div class="content"><ul class="list no-overflow">
+                <li>
+                        <div class="link">
+                            <a href="http://www.nottingham.ac.uk/jobs/currentvacancies/ref/SCI1754" onclick='this.target="_blank"'>PhD Studentship in Partnership with the BBC</a>
+                        </div>
+                
+                </li>
+                <li>
+                        <div class="link">
+                            <a href="https://www.nottingham.ac.uk/computerscience/news/10-fully-funded-phd-studentships.aspx" onclick='this.target="_blank"'>10 Fully Funded PhD Studentships 2017</a>
+                        </div>
+                
+                </li>
+                <li>
+                        <div class="link">
+                            <a href="https://www.nottingham.ac.uk/computerscience/news/getting-girls-coding.aspx" onclick='this.target="_blank"'>Getting Girls Coding!</a>
+                        </div>
+                
+                </li>
+        </ul></div></div><span class="skip-block-to" id="sb-5"></span><a class="skip skip-block" id="fsb-6" href="#sb-6">Skip School Links</a><div id="inst680421" class="block_html  block" role="complementary" data-block="html" data-instanceid="680421" aria-labelledby="instance-680421-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-680421-header">School Links</h2></div></div><div class="content"><div class="no-overflow"><p><a href="http://www.nottingham.ac.uk/computerscience/index.aspx">School's web page</a></p>
+<p><a href="https://workspace.nottingham.ac.uk/display/LCForum/Welcome">Learning Community forum</a></p></div></div></div><span class="skip-block-to" id="sb-6"></span></aside>    </div>
+</div>
+
+<div id="footer-expandable">
+    <a href="#" class="footer-toggle">Toggle Footer</a>
+    <div class="row-fluid container-fluid footer-expandable-inner">
+        <div class="block social-info span4 desktop-first-column"><div class="header"><h3>Social media links</h3></div><div class="content"><p><a class="social-twitter" href="https://twitter.com/UniofNottingham">Our Twitter</a><a class="social-youtube" href="http://www.youtube.com/user/NottmUniversity">Our YouTube</a><a class="social-facebook" href="https://www.facebook.com/TheUniofNottingham">Our Facebook</a><a class="social-listlink" href="http://www.nottingham.ac.uk/connect/nottinghamconnect.aspx">View all &raquo;</a></p></div><br /></div>        <div class="block userblock span4"><div class="header"><h3>Useful Resources</h3></div><div class="content"><ul>
+<li><a href="http://www.nottingham.ac.uk/teaching/index.aspx" target="_blank">Teaching and Learning at Nottingham</a></li>
+<li><a href="http://unow.nottingham.ac.uk/" target="_blank">Open Nottingham (U-Now)</a></li>
+<li><a href="http://xpert.nottingham.ac.uk/" target="_blank">Search Open Education Resources (XPERT)</a></li>
+<li><a href="http://xpert.nottingham.ac.uk/attribution/" target="_blank">Find copysafe images (XPERT Attribution)</a></li>
+<li><a href="http://www.nottingham.ac.uk/toolkits/" target="_blank">Create interactive learning resources (Xerte</a>)</li></ul><p><br></p><ul>
+</ul></div></div>        <aside id="block-region-footer" class="span4 block-region" data-blockregion="footer" data-droptarget="1"><a class="skip skip-block" id="fsb-7" href="#sb-7">Skip Accessibility</a><div id="inst304761" class="block_accessibility  block" role="complementary" data-block="accessibility" data-instanceid="304761" aria-labelledby="instance-304761-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-304761-header">Accessibility</h2></div></div><div class="content"><div id="accessibility_controls" class="content"><ul id="block_accessibility_textresize" class="button_row"><li class="access-button"><a title="Decrease Text Size" id="block_accessibility_dec" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changesize.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;op=dec">A-</a></li><li class="access-button"><a id="block_accessibility_reset" title="Reset Text Size (Clears Saved Setting)" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changesize.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;op=reset">A</a></li><li class="access-button"><a title="Increase Text Size" id="block_accessibility_inc" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changesize.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;op=inc">A+</a></li><li class="access-button savesetting"><a title="Save" id="block_accessibility_save" class="disabled">Save</a></li></ul><ul id="block_accessibility_changecolour"><li class="access-button resetcolours"><a id="block_accessibility_colour1" title="Default Colour Scheme (Clears Saved Setting)" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changecolour.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;scheme=1">&nbsp;</a></li><li class="access-button"><a id="block_accessibility_colour5" title="No background images" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changecolour.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;scheme=5">A</a></li><li class="access-button"><a id="block_accessibility_colour2" title="Lowered Contrast 1 (Pale yellow background, black text)" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changecolour.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;scheme=2">A</a></li><li class="access-button"><a id="block_accessibility_colour3" title="Lowered Contrast 2 (Pale Blue background, black text)" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changecolour.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;scheme=3">A</a></li><li class="access-button"><a id="block_accessibility_colour4" title="High Contrast (Black background, bright yellow text)" href="http://moodle.nottingham.ac.uk/blocks/accessibility/changecolour.php?redirect=http%3A%2F%2Fmoodle.nottingham.ac.uk%2Fmod%2Fresource%2Fview.php%3Fid%3D2873271&amp;scheme=4">A</a></li></ul></div><div id="block_accessibility_message" class="clearfix"></div></div></div><span class="skip-block-to" id="sb-7"></span></aside>    </div>
+</div>
+
+<footer id="page-footer">
+    <div class="container-fluid">
+        <ul>
+<li><a href="http://workspace.nottingham.ac.uk/display/Moodlehelp/Moodle+Terms+of+Use" target="_blank">Terms of use</a></li>
+<li><a href="https://email.nottingham.ac.uk/CookieAuth.dll?GetLogon?curl=Z2Fowa&amp;reason=0&amp;formdir=1" target="_blank">UK Email</a></li>
+<li><a href="http://owa.nottingham.edu.cn" target="_blank">China Email</a></li>
+<li><a href="https://email.nottingham.edu.my/CookieAuth.dll?GetLogon?curl=Z2F&amp;reason=0&amp;formdir=1" target="_blank">Malaysia Email</a></li><li><a href="http://workspace.nottingham.ac.uk/display/StudentMoodle/Student+Moodle+Help" target="_blank">Getting started video</a></li><li><a href="http://workspace.nottingham.ac.uk/display/StudentMoodle/Student+Moodle+Help" target="_blank">Moodle help for Students</a></li><li><a href="http://workspace.nottingham.ac.uk/display/Moodlehelp/Moodle+Help+Guides+for+staff" target="_blank">Moodle help for Staff</a></li></ul><ul>
+</ul>        <span class="copyright">Copyright &copy; 2018 University of Nottingham.</span>
+            </div>
+</footer>
+<a href="#top" id="back-top" class="back-to-top" style="display: inline;"><i class="chevron-up"></i></a>
+</div>
+
+<script type="text/javascript">
+if (/msie/i.test (navigator.userAgent)) //only override IE
+{
+	document.nativeGetElementById = document.getElementById;
+	document.getElementById = function(id)
+	{
+		var elem = document.nativeGetElementById(id);
+		if(elem)
+		{
+			//make sure that it is a valid match on id
+			if(elem.id == id)
+			{
+				return elem;
+			}
+			else
+			{
+				//otherwise find the correct element
+				for(var i=1;i<document.all[id].length;i++)
+				{
+					if(document.all[id][i].id == id)
+					{
+						return document.all[id][i];
+					}
+				}
+			}
+		}
+		return null;
+	};
+}
+</script>
+
+<script type="text/javascript">
+function getInternetExplorerVersion() {
+
+var rv = -1; // Return value assumes failure.
+if (navigator.appName == 'Microsoft Internet Explorer') {
+var ua = navigator.userAgent;
+var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (re.exec(ua) != null)
+rv = parseFloat(RegExp.$1);
+}
+return rv;
+}
+
+function checkVersion() {
+				var ver = getInternetExplorerVersion();
+				
+				if (ver > -1) {
+				
+							if (ver <= 8.0) { 
+											//alert("IE8 detected!");
+document.getElementById("browser_check").style.display = "block";
+var loginboxelements = document.querySelectorAll('.loginbox');
+
+for (var i=0; i < loginboxelements.length; i++) {
+	loginboxelements[i].style.display = "none";
+}
+
+											}
+							}
+						}
+
+checkVersion();
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'http://moodle.nottingham.ac.uk/lib/requirejs.php/1510770071/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'http://moodle.nottingham.ac.uk/lib/javascript.php/1510770071/lib/jquery/jquery-3.1.0.min',
+        jqueryui: 'http://moodle.nottingham.ac.uk/lib/javascript.php/1510770071/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'http://moodle.nottingham.ac.uk/lib/javascript.php/1510770071/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.nottingham.ac.uk/lib/javascript.php/1510770071/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "http://moodle.nottingham.ac.uk/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("en",{
+ "Play": "Play",
+ "Pause": "Pause",
+ "Current Time": "Current Time",
+ "Duration Time": "Duration Time",
+ "Remaining Time": "Remaining Time",
+ "Stream Type": "Stream Type",
+ "LIVE": "LIVE",
+ "Loaded": "Loaded",
+ "Progress": "Progress",
+ "Fullscreen": "Fullscreen",
+ "Non-Fullscreen": "Non-Fullscreen",
+ "Mute": "Mute",
+ "Unmute": "Unmute",
+ "Playback Rate": "Playback Rate",
+ "Subtitles": "Subtitles",
+ "subtitles off": "subtitles off",
+ "Captions": "Captions",
+ "captions off": "captions off",
+ "Chapters": "Chapters",
+ "Close Modal Dialog": "Close Modal Dialog",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions off",
+ "Audio Track": "Audio Track",
+ "You aborted the media playback": "You aborted the media playback",
+ "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+ "No compatible source was found for this media.": "No compatible source was found for this media.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+ "Play Video": "Play Video",
+ "Close": "Close",
+ "Modal Window": "Modal Window",
+ "This is a modal window": "This is a modal window",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+ ", opens captions settings dialog": ", opens captions settings dialog",
+ ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+ ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+ ", selected": ", selected"
+});
+
+    });
+});;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2864529&redirect=1'); return false; };
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2854185&redirect=1'); return false; };
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850121&redirect=1'); return false; };
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866341&redirect=1'); return false; };
+function legacy_activity_onclick_handler_5(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866343&redirect=1'); return false; };
+function legacy_activity_onclick_handler_6(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866342&redirect=1'); return false; };
+function legacy_activity_onclick_handler_7(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2872812&redirect=1'); return false; };
+function legacy_activity_onclick_handler_8(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2872813&redirect=1'); return false; };
+function legacy_activity_onclick_handler_9(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873267&redirect=1'); return false; };
+function legacy_activity_onclick_handler_10(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874686&redirect=1'); return false; };
+function legacy_activity_onclick_handler_11(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873271&redirect=1'); return false; };
+function legacy_activity_onclick_handler_12(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874684&redirect=1'); return false; };
+function legacy_activity_onclick_handler_13(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874685&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_11, '#label_5_34', null);
+    });
+;
+require(["block_navigation/navblock"], function(amd) { amd.init("4"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("5", null); });;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2835878&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_1, '#action_link5a4cb5a01e35920', null);
+    });
+;
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2835879&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_2, '#action_link5a4cb5a01e35921', null);
+    });
+;
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2842536&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_3, '#action_link5a4cb5a01e35922', null);
+    });
+;
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2842537&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_4, '#action_link5a4cb5a01e35923', null);
+    });
+;
+function legacy_activity_onclick_handler_5(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2849605&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_5, '#action_link5a4cb5a01e35924', null);
+    });
+;
+function legacy_activity_onclick_handler_6(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2849607&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_6, '#action_link5a4cb5a01e35925', null);
+    });
+;
+function legacy_activity_onclick_handler_7(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850537&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_7, '#action_link5a4cb5a01e35926', null);
+    });
+;
+function legacy_activity_onclick_handler_8(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850536&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_8, '#action_link5a4cb5a01e35927', null);
+    });
+;
+function legacy_activity_onclick_handler_9(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2853927&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_9, '#action_link5a4cb5a01e35928', null);
+    });
+;
+function legacy_activity_onclick_handler_10(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2856723&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_10, '#action_link5a4cb5a01e35929', null);
+    });
+;
+function legacy_activity_onclick_handler_11(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2857531&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_11, '#action_link5a4cb5a01e35930', null);
+    });
+;
+function legacy_activity_onclick_handler_12(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2857530&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_12, '#action_link5a4cb5a01e35931', null);
+    });
+;
+function legacy_activity_onclick_handler_13(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2859163&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_13, '#action_link5a4cb5a01e35932', null);
+    });
+;
+function legacy_activity_onclick_handler_14(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2859164&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_14, '#action_link5a4cb5a01e35933', null);
+    });
+;
+function legacy_activity_onclick_handler_15(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2863430&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_15, '#action_link5a4cb5a01e35934', null);
+    });
+;
+function legacy_activity_onclick_handler_16(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2863431&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_16, '#action_link5a4cb5a01e35935', null);
+    });
+;
+function legacy_activity_onclick_handler_17(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2867021&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_17, '#action_link5a4cb5a01e35936', null);
+    });
+;
+function legacy_activity_onclick_handler_18(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2867022&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_18, '#action_link5a4cb5a01e35937', null);
+    });
+;
+function legacy_activity_onclick_handler_19(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2870610&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_19, '#action_link5a4cb5a01e35938', null);
+    });
+;
+function legacy_activity_onclick_handler_20(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2870612&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_20, '#action_link5a4cb5a01e35939', null);
+    });
+;
+function legacy_activity_onclick_handler_21(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874683&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_21, '#action_link5a4cb5a01e35940', null);
+    });
+;
+function legacy_activity_onclick_handler_22(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874680&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_22, '#action_link5a4cb5a01e35941', null);
+    });
+;
+function legacy_activity_onclick_handler_23(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876894&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_23, '#action_link5a4cb5a01e35942', null);
+    });
+;
+function legacy_activity_onclick_handler_24(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876892&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_24, '#action_link5a4cb5a01e35943', null);
+    });
+;
+function legacy_activity_onclick_handler_25(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876893&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_25, '#action_link5a4cb5a01e35944', null);
+    });
+;
+function legacy_activity_onclick_handler_26(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2876895&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_26, '#action_link5a4cb5a01e35945', null);
+    });
+;
+function legacy_activity_onclick_handler_27(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2880887&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_27, '#action_link5a4cb5a01e35946', null);
+    });
+;
+function legacy_activity_onclick_handler_28(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2880893&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_28, '#action_link5a4cb5a01e35947', null);
+    });
+;
+function legacy_activity_onclick_handler_29(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2884357&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_29, '#action_link5a4cb5a01e35948', null);
+    });
+;
+function legacy_activity_onclick_handler_30(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2884358&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_30, '#action_link5a4cb5a01e35949', null);
+    });
+;
+function legacy_activity_onclick_handler_31(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2887993&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_31, '#action_link5a4cb5a01e35950', null);
+    });
+;
+function legacy_activity_onclick_handler_32(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2887994&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_32, '#action_link5a4cb5a01e35951', null);
+    });
+;
+function legacy_activity_onclick_handler_33(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2890323&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_33, '#action_link5a4cb5a01e35952', null);
+    });
+;
+function legacy_activity_onclick_handler_34(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2890324&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_34, '#action_link5a4cb5a01e35953', null);
+    });
+;
+function legacy_activity_onclick_handler_35(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2890329&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_35, '#action_link5a4cb5a01e35954', null);
+    });
+;
+function legacy_activity_onclick_handler_36(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2893655&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_36, '#action_link5a4cb5a01e35955', null);
+    });
+;
+function legacy_activity_onclick_handler_37(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2893657&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_37, '#action_link5a4cb5a01e35956', null);
+    });
+;
+function legacy_activity_onclick_handler_38(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2896472&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_38, '#action_link5a4cb5a01e35957', null);
+    });
+;
+function legacy_activity_onclick_handler_39(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2896473&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_39, '#action_link5a4cb5a01e35958', null);
+    });
+;
+function legacy_activity_onclick_handler_40(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2899213&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_40, '#action_link5a4cb5a01e35959', null);
+    });
+;
+function legacy_activity_onclick_handler_41(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2899214&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_41, '#action_link5a4cb5a01e35960', null);
+    });
+;
+function legacy_activity_onclick_handler_42(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2844572&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_42, '#action_link5a4cb5a01e35961', null);
+    });
+;
+function legacy_activity_onclick_handler_43(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850690&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_43, '#action_link5a4cb5a01e35962', null);
+    });
+;
+function legacy_activity_onclick_handler_44(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2857243&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_44, '#action_link5a4cb5a01e35963', null);
+    });
+;
+function legacy_activity_onclick_handler_45(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2862791&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_45, '#action_link5a4cb5a01e35964', null);
+    });
+;
+function legacy_activity_onclick_handler_46(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2870605&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_46, '#action_link5a4cb5a01e35965', null);
+    });
+;
+function legacy_activity_onclick_handler_47(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2877144&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_47, '#action_link5a4cb5a01e35966', null);
+    });
+;
+function legacy_activity_onclick_handler_48(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2864529&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_48, '#action_link5a4cb5a01e35967', null);
+    });
+;
+function legacy_activity_onclick_handler_49(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2854185&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_49, '#action_link5a4cb5a01e35968', null);
+    });
+;
+function legacy_activity_onclick_handler_50(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2850121&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_50, '#action_link5a4cb5a01e35969', null);
+    });
+;
+function legacy_activity_onclick_handler_51(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866341&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_51, '#action_link5a4cb5a01e35970', null);
+    });
+;
+function legacy_activity_onclick_handler_52(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866343&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_52, '#action_link5a4cb5a01e35971', null);
+    });
+;
+function legacy_activity_onclick_handler_53(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2866342&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_53, '#action_link5a4cb5a01e35972', null);
+    });
+;
+function legacy_activity_onclick_handler_54(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2872812&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_54, '#action_link5a4cb5a01e35973', null);
+    });
+;
+function legacy_activity_onclick_handler_55(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2872813&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_55, '#action_link5a4cb5a01e35974', null);
+    });
+;
+function legacy_activity_onclick_handler_56(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873267&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_56, '#action_link5a4cb5a01e35975', null);
+    });
+;
+function legacy_activity_onclick_handler_57(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874686&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_57, '#action_link5a4cb5a01e35976', null);
+    });
+;
+function legacy_activity_onclick_handler_58(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2873271&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_58, '#action_link5a4cb5a01e35977', null);
+    });
+;
+function legacy_activity_onclick_handler_59(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874684&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_59, '#action_link5a4cb5a01e35978', null);
+    });
+;
+function legacy_activity_onclick_handler_60(e) { e.halt(); window.open('http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2874685&redirect=1'); return false; };
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_60, '#action_link5a4cb5a01e35979', null);
+    });
+;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_11, '#label_5_34', null);
+    });
+;
+require(["core/notification"], function(amd) { amd.init(4173438, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.nottingham.ac.uk/theme/javascript.php/nottingham_science/1510770071/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","viewallcourses":"View all modules","morehelp":"More help","loadinghelp":"Loading...","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"block":{"addtodock":"Move this to the dock","undockitem":"Undock this item","dockblock":"Dock {$a} block","undockblock":"Undock {$a} block","undockall":"Undock all","hidedockpanel":"Hide the dock panel","hidepanel":"Hide panel"},"langconfig":{"thisdirectionvertical":"btt"},"block_accessibility":{"saved":"Setting Saved","jsnosave":"Error saving settings","reset":"Setting Cleared","jsnosizereset":"Error resetting text size","jsnocolourreset":"Error resetting colour scheme","jsnosize":"Error changing size","jsnocolour":"Error changing colour scheme","launchtoolbar":"Launch ATbar"},"theme_nottingham":{"togglefullscreenmode":"Toggle fullscreen content mode.  (Ctrl + Alt + b)"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {setTimeout("fix_column_widths()", 20);
+Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"});
+});
+ M.util.js_pending('random5a4cb5a01e35980'); Y.use('block_course_contents', function(Y) { M.block_course_contents.init(Y);  M.util.js_complete('random5a4cb5a01e35980'); });
+ M.util.js_pending('random5a4cb5a01e35981'); Y.use('block_accessibility', function(Y) { M.block_accessibility.init(Y, false);  M.util.js_complete('random5a4cb5a01e35981'); });
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+Y.use("moodle-theme_nottingham-fullscreen",function() {M.theme_nottingham.init_fullscreen({"fullscreenmode":false});
+});
+M.util.init_block_hider(Y, {"id":"inst4","title":"Navigation","preference":"block4hidden","tooltipVisible":"Hide Navigation block","tooltipHidden":"Show Navigation block"});
+M.util.init_block_hider(Y, {"id":"inst435663","title":"Module Contents","preference":"block435663hidden","tooltipVisible":"Hide Module Contents block","tooltipHidden":"Show Module Contents block"});
+M.util.init_block_hider(Y, {"id":"inst680418","title":"School News","preference":"block680418hidden","tooltipVisible":"Hide School News block","tooltipHidden":"Show School News block"});
+M.util.init_block_hider(Y, {"id":"inst680421","title":"School Links","preference":"block680421hidden","tooltipVisible":"Hide School Links block","tooltipHidden":"Show School Links block"});
+M.util.init_block_hider(Y, {"id":"inst304761","title":"Accessibility","preference":"block304761hidden","tooltipVisible":"Hide Accessibility block","tooltipHidden":"Show Accessibility block"});
+ M.util.js_pending('random5a4cb5a01e35996'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5a4cb5a01e35996'); });
+})();
+//]]>
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"85d36fdef0","applicationID":"3213358","transactionName":"NlJTbBQEWksEAEFYXw8YZEoPSllXAUxHVEMOQkNbA0pCUQAUG0FYEQ==","queueTime":0,"applicationTime":684,"atts":"GhVEGlweSRRHAhcLSxxK","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Running</string>
+    <string name="welcome">Welcome</string>
+    <string name="choice1">View previous sessions</string>
+    <string name="choice2">Start new session</string>
+    <string name="eula">This application is currently under development, so some bugs may still be present. Any bugs found should be reported to the development team as soon as possible so as to provide the best user experience possible.</string>
+    <string name="start_log">Start Logging</string>
+    <string name="stop_log">Stop Logging</string>
+    <string name="time_title">Elapsed Time</string>
+    <string name="distance_title">Distance Traveled</string>
+    <string name="speed_title">Average Speed</string>
+    <string name="save_button">Save Log</string>
+    <string name="delete_button">Delete Log</string>
+    <string name="time">----</string>
+</resources>

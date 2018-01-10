@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tristanokeefe.running.Activity.MainActivity">
+
+    <Button
+        android:text="@string/stop_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop_log_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/start_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_log_button"
+        android:layout_above="@+id/stop_log_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/main_time"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:layout_below="@+id/time_title"
+        android:layout_alignStart="@+id/main_speed" />
+
+    <TextView
+        android:id="@+id/main_distance"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:layout_above="@+id/start_log_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/main_speed"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:layout_above="@+id/distance_title"
+        android:layout_alignStart="@+id/main_distance"
+        android:layout_marginBottom="51dp" />
+
+    <TextView
+        android:id="@+id/time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/distance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_above="@+id/main_distance"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/speed_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speed_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_above="@+id/main_speed"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
